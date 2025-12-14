@@ -50,3 +50,15 @@ This is the logic for one round. We take computerChoice and humanChoice as argum
 - ELSE
   - DISPLAY "Invalid input"
 - ENDIF
+
+### playGame
+
+The game is played for a total of 5 rounds. We can write:
+
+- SET playRound = 0
+- FOR playRound = 0 to 5
+  - GET humanSelection by calling getHumanChoice
+  - GET computerSelection by calling getComputerChoice
+  - CALL playRound with humanSelection and computerSelection
+- ENDFOR
+
