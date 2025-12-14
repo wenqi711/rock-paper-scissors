@@ -44,7 +44,8 @@ function playRound(humanChoice, computerChoice) {
     // - IF computerChoice is equal to humanChoice THEN
     if (computerChoice === humanChoice) {
         //   - DISPLAY "This is a tie!"
-        return "This is a tie!"
+        console.log("This is a tie!");
+        return
     // - ENDIF
     };
 
@@ -79,7 +80,21 @@ function playRound(humanChoice, computerChoice) {
 
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
 
-playRound(humanSelection, computerSelection);
+    // - SET playRound = 0
+    let round = 0;
+    // - FOR playRound = 0 to 5
+    for (; round < 5; round++) {
+    //   - GET humanSelection by calling getHumanChoice
+        const humanSelection = getHumanChoice();
+    //   - GET computerSelection by calling getComputerChoice
+        const computerSelection = getComputerChoice();
+    //   - CALL playRound with humanSelection and computerSelection
+        playRound(humanSelection, computerSelection);
+    // - ENDFOR
+    }
+
+}
+
+playGame();
