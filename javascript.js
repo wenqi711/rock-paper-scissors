@@ -91,6 +91,7 @@ function playGame() {
         const computerSelection = getComputerChoice();
     //   - CALL playRound with humanSelection and computerSelection
         playRound(humanSelection, computerSelection);
+    // DISPLAY scores for both the player and the computer
         console.log(`You: ${humanScore}, Computer: ${computerScore}`);
     // - ENDFOR
     }
