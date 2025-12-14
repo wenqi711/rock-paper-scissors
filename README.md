@@ -1,5 +1,13 @@
 # TOP Project #3
 
+(14-12-25) Hello, everyone!
+
+This is my third project with The Odin Project. In this project, I built a simple rock, paper, scissors game that is played entirely in the console. I endeavoured to write out the logic for each function clearly before implementing it in Javascript, which has served me well. The pseudocode is listed below.
+
+The game assumes a valid input from the user, and plays for exactly 5 rounds before declaring a winner.
+
+Overall, this took me under 2 hours from start to finish.
+
 ## Pseudocode
 
 ### getComputerChoice
@@ -61,9 +69,9 @@ The game is played for a total of 5 rounds. We can write:
   - GET computerSelection by calling getComputerChoice
   - CALL playRound with humanSelection and computerSelection
 - ENDFOR
-- IF humanScore > computerScore
+- IF humanScore > computerScore THEN
   - DISPLAY "Congratulations! You won!"
-- ELSE IF computerScore > humanScore
+- ELSE IF computerScore > humanScore THEN
   - DISPLAY "You lost! Better luck next time!"
 - ELSE
   - DISPLAY "It's a tie!"
