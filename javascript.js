@@ -60,9 +60,8 @@ function playRound(humanChoice, computerChoice) {
     //   - DISPLAY "You win! humanChoice beats computerChoice!"
         console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
         return
-    }
     // - ELSE IF humanChoice is rock and computerChoice is paper
-    else if ((humanChoice === "rock" && computerChoice === "paper")
+    } else if ((humanChoice === "rock" && computerChoice === "paper")
     // - OR humanChoice is scissors and computerChoice is rock
     || (humanChoice === "scissors" && computerChoice === "rock")
     // - OR humanChoice is paper and computerChoice is scissors THEN
@@ -92,7 +91,24 @@ function playGame() {
         const computerSelection = getComputerChoice();
     //   - CALL playRound with humanSelection and computerSelection
         playRound(humanSelection, computerSelection);
+        console.log(`You: ${humanScore}, Computer: ${computerScore}`);
     // - ENDFOR
+    }
+    // - IF humanScore > computerScore THEN
+    if (humanScore > computerScore) {
+    //   - DISPLAY "Congratulations! You won!"
+        console.log("Congratulations! You won!");
+        return
+    // - ELSE IF computerScore > humanScore THEN
+    } else if (computerScore > humanScore) {
+    //   - DISPLAY "You lost! Better luck next time!"
+        console.log("You lost! Better luck next time!");
+        return
+    // - ELSE
+    } else {
+    //   - DISPLAY "It's a tie!"
+        console.log("It's a tie!")
+        return
     }
 
 }
