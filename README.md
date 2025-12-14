@@ -18,3 +18,13 @@ So for this function, we can write:
 - ELSE
   - DISPLAY computerChoice as "Scissors"
 - ENDIF
+
+### getHumanChoice
+
+We are assuming that the user will always input a valid choice, which I am setting as the words "rock", "paper", and "scissors". We can deal with capitalisation using toLowerCase().
+
+So for this function, we can write:
+
+- GET humanChoice
+- CALL toLowerCase to change humanChoice to lowercase letters
+- DISPLAY humanChoice
