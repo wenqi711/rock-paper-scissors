@@ -55,10 +55,16 @@ This is the logic for one round. We take computerChoice and humanChoice as argum
 
 The game is played for a total of 5 rounds. We can write:
 
-- SET playRound = 0
-- FOR playRound = 0 to 5
+- SET round = 0
+- FOR round = 0 to 5
   - GET humanSelection by calling getHumanChoice
   - GET computerSelection by calling getComputerChoice
   - CALL playRound with humanSelection and computerSelection
 - ENDFOR
+- IF humanScore > computerScore
+  - DISPLAY "Congratulations! You won!"
+- ELSE IF computerScore > humanScore
+  - DISPLAY "You lost! Better luck next time!"
+- ELSE
+  - DISPLAY "It's a tie!"
 
