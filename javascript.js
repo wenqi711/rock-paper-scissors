@@ -5,18 +5,18 @@ function getComputerChoice() {
 
     // IF randomNumber < 1/3 THEN
     if (randomNumber < 1/3) {
-        //   DISPLAY computerChoice as "Rock"
-        return "Rock"
+        //   DISPLAY computerChoice as "rock"
+        return "rock"
     }
     // ELSE IF randomNumber > 2/3 THEN
     else if (randomNumber > 2/3) {
-        //   DISPLAY computerChoice as "Paper"
-        return "Paper"
+        //   DISPLAY computerChoice as "paper"
+        return "paper"
     }
     // ELSE
     else {
-        //   DISPLAY computerChoice as "Scissors"
-        return "Scissors"
+        //   DISPLAY computerChoice as "scissors"
+        return "scissors"
     }
     // ENDIF
 
@@ -38,3 +38,41 @@ function getHumanChoice() {
 // Declare the players score variables
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+
+    // - IF computerChoice is equal to humanChoice THEN
+    if (computerChoice === humanChoice) {
+        //   - DISPLAY "This is a tie!"
+        return "This is a tie!"
+    // - ENDIF
+    };
+
+    // - IF humanChoice is rock and computerChoice is scissors
+    if ((humanChoice === "rock" && computerChoice === "scissors")
+    // - OR humanChoice is scissors and computerChoice is paper
+    || (humanChoice === "scissors" && computerChoice === "paper")
+    // - OR humanChoice is paper and computerChoice is rock THEN
+    || (humanChoice === "paper" && computerChoice === "rock")) {
+    //   - INCREASE humanScore by 1
+        ++humanScore;
+    //   - DISPLAY "You win! humanChoice beats computerChoice!"
+        return `You win! ${humanChoice} beats ${computerChoice}!`
+    }
+    // - ELSE IF humanChoice is rock and computerChoice is paper
+    ELSEIF ((humanChoice === "rock" && computerChoice === "paper")
+    // - OR humanChoice is scissors and computerChoice is rock
+    || (humanChoice === "scissors" && computerChoice === "rock")
+    // - OR humanChoice is paper and computerChoice is scissors THEN
+    || (humanChoice === "paper" && computerChoice === "scissors")) {
+    //   - INCREASE computerScore by 1
+        ++computerScore;
+    //   - DISPLAY "You lose! computerChoice beats humanChoice!"
+        return `You lose! ${computerChoice} beats ${humanChoice}!`
+    }
+    // - ELSE
+    ELSE
+    //   - DISPLAY "Invalid input"
+    return "Invalid input"
+
+}
