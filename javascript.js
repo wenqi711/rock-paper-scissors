@@ -1,7 +1,7 @@
 function getComputerChoice() {
 
     // SET randomNumber to Math.random
-    randomNumber = Math.random();
+    let randomNumber = Math.random();
 
     // IF randomNumber < 1/3 THEN
     if (randomNumber < 1/3) {
@@ -21,4 +21,16 @@ function getComputerChoice() {
     // ENDIF
 
     return "No choice possible"
+}
+
+function getHumanChoice() {
+
+    // - GET humanChoice
+    let humanChoice = prompt("Enter your choice: ", "");
+
+    // - CALL toLowerCase to change humanChoice to lowercase letters
+    humanChoice = humanChoice.toLowerCase();
+
+    // - DISPLAY humanChoice
+    return humanChoice
 }
