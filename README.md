@@ -12,11 +12,11 @@ So for this function, we can write:
 
 - SET randomNumber to Math.random
 - IF randomNumber < 1/3 THEN
-  - DISPLAY computerChoice as "Rock"
+  - DISPLAY computerChoice as "rock"
 - ELSE IF randomNumber > 2/3 THEN
-  - DISPLAY computerChoice as "Paper"
+  - DISPLAY computerChoice as "paper"
 - ELSE
-  - DISPLAY computerChoice as "Scissors"
+  - DISPLAY computerChoice as "scissors"
 - ENDIF
 
 ### getHumanChoice
@@ -28,3 +28,24 @@ So for this function, we can write:
 - GET humanChoice
 - CALL toLowerCase to change humanChoice to lowercase letters
 - DISPLAY humanChoice
+
+### playRound
+
+This is the logic for one round. We take computerChoice and humanChoice as arguments and determine which one will win, increasing the corresponding player's score. We know rock beats scissors, paper beats rock, and scissors beats paper. So for this function, we can write:
+
+- IF computerChoice is equal to humanChoice THEN
+  - DISPLAY "This is a tie!"
+- ENDIF
+
+- IF humanChoice is rock and computerChoice is scissors
+- OR humanChoice is scissors and computerChoice is paper
+- OR humanChoice is paper and computerChoice is rock THEN
+  - INCREASE humanScore by 1
+  - DISPLAY "You win! humanChoice beats computerChoice!"
+- ELSE IF humanChoice is rock and computerChoice is paper
+- OR humanChoice is scissors and computerChoice is rock
+- OR humanChoice is paper and computerChoice is scissors THEN
+  - INCREASE computerScore by 1
+  - DISPLAY "You lose! computerChoice beats humanChoice!"
+- ELSE
+  - DISPLAY "Invalid input"
