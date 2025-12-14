@@ -57,10 +57,11 @@ function playRound(humanChoice, computerChoice) {
     //   - INCREASE humanScore by 1
         ++humanScore;
     //   - DISPLAY "You win! humanChoice beats computerChoice!"
-        return `You win! ${humanChoice} beats ${computerChoice}!`
+        console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
+        return
     }
     // - ELSE IF humanChoice is rock and computerChoice is paper
-    ELSEIF ((humanChoice === "rock" && computerChoice === "paper")
+    else if ((humanChoice === "rock" && computerChoice === "paper")
     // - OR humanChoice is scissors and computerChoice is rock
     || (humanChoice === "scissors" && computerChoice === "rock")
     // - OR humanChoice is paper and computerChoice is scissors THEN
@@ -68,11 +69,17 @@ function playRound(humanChoice, computerChoice) {
     //   - INCREASE computerScore by 1
         ++computerScore;
     //   - DISPLAY "You lose! computerChoice beats humanChoice!"
-        return `You lose! ${computerChoice} beats ${humanChoice}!`
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
+        return
     }
     // - ELSE
-    ELSE
     //   - DISPLAY "Invalid input"
-    return "Invalid input"
+    console.log("Invalid input");
+    return
 
 }
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);

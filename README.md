@@ -49,3 +49,4 @@ This is the logic for one round. We take computerChoice and humanChoice as argum
   - DISPLAY "You lose! computerChoice beats humanChoice!"
 - ELSE
   - DISPLAY "Invalid input"
+- ENDIF
