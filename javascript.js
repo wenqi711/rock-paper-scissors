@@ -29,7 +29,7 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
 
     if (computerChoice === humanChoice) {
-        console.log("This is a tie!");
+        resultsContainer.textContent = `You played ${humanChoice}, Computer played ${computerChoice}. It's a tie!`;
         return
     };
 
@@ -37,19 +37,16 @@ function playRound(humanChoice, computerChoice) {
     || (humanChoice === "scissors" && computerChoice === "paper")
     || (humanChoice === "paper" && computerChoice === "rock")) {
         ++humanScore;
-        console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
+        resultsContainer.textContent = `You win! ${humanChoice} beats ${computerChoice}!`;
         return
 
     } else if ((humanChoice === "rock" && computerChoice === "paper")
     || (humanChoice === "scissors" && computerChoice === "rock")
     || (humanChoice === "paper" && computerChoice === "scissors")) {
         ++computerScore;
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
+        resultsContainer.textContent = `You lose! ${computerChoice} beats ${humanChoice}!`;
         return
     }
-
-    console.log("Invalid input");
-    return
 
 }
 
