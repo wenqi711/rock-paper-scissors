@@ -43,7 +43,6 @@ function playAgain() {
 
 let humanScore = 0;
 let computerScore = 0;
-let numOfRounds = 0;
 
 // Create rock button
 const rockButton = document.createElement("button");
@@ -72,8 +71,6 @@ mainBody.appendChild(resultsContainer);
 
 buttonContainer.addEventListener("click", (event) => {
     let target = event.target;
-    numOfRounds++;
-    console.log(numOfRounds);
     switch (target.classList.value) {
         case 'rock-button':
             playRound("rock", getComputerChoice());
@@ -91,7 +88,7 @@ buttonContainer.addEventListener("click", (event) => {
 });
 
 function isGameEnd() {
-    if (numOfRounds === 5) {
+    if (humanScore === 5 || computerScore === 5) {
         buttonContainer.removeChild(rockButton);
         buttonContainer.removeChild(paperButton);
         buttonContainer.removeChild(scissorsButton);
