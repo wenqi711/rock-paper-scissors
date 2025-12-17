@@ -53,27 +53,42 @@ function playRound(humanChoice, computerChoice) {
 
 }
 
+// Create rock button
 const rockButton = document.createElement("button");
-const paperButton = document.createElement("button");
-const scissorsButton = document.createElement("button");
-
 rockButton.textContent = "Rock";
+rockButton.classList.add("rock-button");
+
+// Create paper button
+const paperButton = document.createElement("button");
 paperButton.textContent = "Paper";
+paperButton.classList.add("paper-button");
+
+// Create scissors button
+const scissorsButton = document.createElement("button");
 scissorsButton.textContent = "Scissors";
-
-rockButton.addEventListener("click", () => {
-    console.log("rock");
-});
-
-paperButton.addEventListener("click", () => {
-    console.log("paper");
-});
-
-scissorsButton.addEventListener("click", () => {
-    console.log("scissors");
-});
+scissorsButton.classList.add("scissors-button");
 
 const mainBody = document.querySelector("body");
-mainBody.appendChild(rockButton);
-mainBody.appendChild(paperButton);
-mainBody.appendChild(scissorsButton);
+const buttonContainer = document.createElement("div");
+mainBody.appendChild(buttonContainer);
+buttonContainer.appendChild(rockButton);
+buttonContainer.appendChild(paperButton);
+buttonContainer.appendChild(scissorsButton);
+
+const resultsContainer = document.createElement("div");
+mainBody.appendChild(resultsContainer);
+let humanSelection = "";
+
+buttonContainer.addEventListener("click", (event) => {
+    let target = event.target;
+    switch (target.classList.value) {
+        case 'rock-button':
+            humanSelection = 'rock';
+            break;
+        case 'paper-button':
+            humanSelection = 'paper';
+            break;
+        case 'scissors-button':
+            humanSelection = 'scissors';
+    }
+});
