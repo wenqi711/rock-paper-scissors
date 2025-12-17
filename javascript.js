@@ -77,18 +77,18 @@ buttonContainer.appendChild(scissorsButton);
 
 const resultsContainer = document.createElement("div");
 mainBody.appendChild(resultsContainer);
-let humanSelection = "";
 
 buttonContainer.addEventListener("click", (event) => {
     let target = event.target;
     switch (target.classList.value) {
         case 'rock-button':
-            humanSelection = 'rock';
+            playRound("rock", getComputerChoice());
             break;
         case 'paper-button':
-            humanSelection = 'paper';
+            playRound("paper", getComputerChoice());
             break;
         case 'scissors-button':
-            humanSelection = 'scissors';
+            playRound("scissors", getComputerChoice());
+            break;
     }
 });
