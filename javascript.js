@@ -53,3 +53,27 @@ function playRound(humanChoice, computerChoice) {
 
 }
 
+const rockButton = document.createElement("button");
+const paperButton = document.createElement("button");
+const scissorsButton = document.createElement("button");
+
+rockButton.textContent = "Rock";
+paperButton.textContent = "Paper";
+scissorsButton.textContent = "Scissors";
+
+rockButton.addEventListener("click", () => {
+    console.log("rock");
+});
+
+paperButton.addEventListener("click", () => {
+    console.log("paper");
+});
+
+scissorsButton.addEventListener("click", () => {
+    console.log("scissors");
+});
+
+const mainBody = document.querySelector("body");
+mainBody.appendChild(rockButton);
+mainBody.appendChild(paperButton);
+mainBody.appendChild(scissorsButton);
