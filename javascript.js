@@ -22,18 +22,23 @@ function playRound(humanChoice, computerChoice) {
     || (humanChoice === "scissors" && computerChoice === "paper")
     || (humanChoice === "paper" && computerChoice === "rock")) {
         ++humanScore;
-        resultsContainer.textContent = `You win! ${humanChoice} beats ${computerChoice}!`;
+        resultsContainer.textContent = `You win! ${capitalize(humanChoice)} beats ${computerChoice}!`;
 
     } 
     else if ((humanChoice === "rock" && computerChoice === "paper")
     || (humanChoice === "scissors" && computerChoice === "rock")
     || (humanChoice === "paper" && computerChoice === "scissors")) {
         ++computerScore;
-        resultsContainer.textContent = `You lose! ${computerChoice} beats ${humanChoice}!`;
+        resultsContainer.textContent = `You lose! ${capitalize(computerChoice)} beats ${humanChoice}!`;
     }
 
     scoreContainer.textContent = `Player score: ${humanScore}, Computer score: ${computerScore}`;
     return;
+}
+
+function capitalize(str) {
+    firstLetter = str[0].toUpperCase();
+    return firstLetter + str.slice(1);
 }
 
 // Declare score variables
