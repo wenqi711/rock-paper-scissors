@@ -71,15 +71,17 @@ endGameButton.classList.add("end-game-button");
 
 // Create containers for holding buttons, results, scores
 const mainBody = document.querySelector("body");
+
+const scoreContainer = document.createElement("div");
+scoreContainer.textContent = "Welcome to Wen Qi's game of Rock, Paper, Scissors!";
+mainBody.appendChild(scoreContainer);
+
 const buttonContainer = document.createElement("div");
 mainBody.appendChild(buttonContainer);
 buttonContainer.appendChild(startGameButton);
 
 const resultsContainer = document.createElement("div");
 mainBody.appendChild(resultsContainer);
-
-const scoreContainer = document.createElement("div");
-mainBody.appendChild(scoreContainer);
 
 // Button functionality
 buttonContainer.addEventListener("click", (event) => {
