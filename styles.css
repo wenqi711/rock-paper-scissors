@@ -1,7 +1,8 @@
 * {
     background-color: #eae0cf;
     color: #213448;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: serif;
 }
 
 body {
@@ -30,6 +31,7 @@ button {
     background-color: #94b4c1;
     padding: 12px;
     border-radius: 12px;
+    font-family: serif;
 }
 
 .button-container {
