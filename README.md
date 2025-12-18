@@ -1,5 +1,7 @@
 # TOP Project #3
 
+(18-12-25) I updated this project to include a user interface. It is still primarily text-based, but I focused on making sure the page is functional. From the previous version, I changed how the game ended, letting players play infinite rounds until either they or the computer reached 5 points. I also created a 'Welcome page' and an option for players to play again once the game ended.
+
 (14-12-25) Hello, everyone!
 
 This is my third project with The Odin Project. In this project, I built a simple rock, paper, scissors game that is played entirely in the console. I endeavoured to write out the logic for each function clearly before implementing it in Javascript, which has served me well. The pseudocode is listed below.
